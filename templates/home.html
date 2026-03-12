@@ -1,36 +1,107 @@
-<!DOCTYPE html>
-<html>
-
 <head>
+
 <title>Breast Cancer Prediction</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 </head>
 
 <body>
 
-<h2>Breast Cancer Prediction</h2>
+<div id="particles-js"></div>
+
+<div class="container-main">
+
+<div class="card-box">
+
+<h3 class="text-center mb-4">Breast Cancer Prediction</h3>
 
 <form action="/predict" method="post">
 
-<label>texture_mean</label><br>
-<input type="text" name="query1"><br><br>
+<div class="mb-3">
+<label>Texture Mean</label>
+<input type="number" step="any" name="query1" class="form-control" required>
+</div>
 
-<label>perimeter_mean</label><br>
-<input type="text" name="query2"><br><br>
+<div class="mb-3">
+<label>Perimeter Mean</label>
+<input type="number" step="any" name="query2" class="form-control" required>
+</div>
 
-<label>smoothness_mean</label><br>
-<input type="text" name="query3"><br><br>
+<div class="mb-3">
+<label>Smoothness Mean</label>
+<input type="number" step="any" name="query3" class="form-control" required>
+</div>
 
-<label>compactness_mean</label><br>
-<input type="text" name="query4"><br><br>
+<div class="mb-3">
+<label>Compactness Mean</label>
+<input type="number" step="any" name="query4" class="form-control" required>
+</div>
 
-<label>symmetry_mean</label><br>
-<input type="text" name="query5"><br><br>
+<div class="mb-3">
+<label>Symmetry Mean</label>
+<input type="number" step="any" name="query5" class="form-control" required>
+</div>
 
-<button type="submit">SUBMIT</button>
+<button class="btn btn-custom">Submit</button>
 
 </form>
 
-<h3>{{output}}</h3>
+{% if prediction_text %}
+
+<div class="result-box
+{% if 'not' in prediction_text.lower() %}
+success
+{% else %}
+danger
+{% endif %}
+">
+
+{{prediction_text}}
+
+</div>
+
+{% endif %}
+
+</div>
+
+</div>
+
+<script>
+
+particlesJS("particles-js",{
+
+"particles":{
+
+"number":{"value":80},
+
+"color":{"value":"#ffffff"},
+
+"shape":{"type":"circle"},
+
+"opacity":{"value":0.5},
+
+"size":{"value":3},
+
+"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},
+
+"move":{"enable":true,"speed":3}
+
+},
+
+"interactivity":{
+
+"events":{"onhover":{"enable":true,"mode":"repulse"}}
+
+}
+
+});
+
+</script>
 
 </body>
 
