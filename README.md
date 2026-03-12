@@ -1,56 +1,62 @@
-# breast-cancer-ml-project
-# Breast Cancer Prediction using Machine Learning
+# Breast Cancer Prediction Web Application
 
 ## Project Overview
 
-This project uses Machine Learning to predict whether a breast tumor is **malignant (cancerous)** or **benign (non-cancerous)** using a dataset.
+This project is a Machine Learning based web application that predicts whether a breast tumor is **Malignant (Cancerous)** or **Benign (Non-Cancerous)** based on medical parameters.
 
-The model is built using Python and trained with a Random Forest algorithm.
+The model is trained using a **Random Forest Classifier** and deployed as an interactive web application using **Flask**.
 
-## Dataset
+Users can enter medical parameters through a web interface and instantly receive prediction results.
 
-The dataset used in this project contains medical features of breast tumors.
+---
 
-File used:
+## Live Demo
 
-* breast-cancer-data.csv
+https://breast-cancer-ml-project-d07e.onrender.com
+
+---
+
+## Features
+
+• Machine learning model for breast cancer prediction  
+• Interactive web interface using HTML, CSS, Bootstrap  
+• Real-time prediction using Flask backend  
+• Deployed web application accessible online  
+
+---
 
 ## Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Scikit-learn
-* Jupyter Notebook
+Python  
+Flask  
+Pandas  
+NumPy  
+Scikit-learn  
+HTML  
+CSS  
+Bootstrap  
 
-## Machine Learning Model
+---
 
-The following algorithm is used:
+## Project Structure
 
-* Random Forest Classifier
+breast-cancer-ml-project
 
-The dataset is divided using:
+app.py  
+model.pkl  
+requirements.txt  
+runtime.txt  
 
-* train_test_split (80% training, 20% testing)
+templates  
+home.html  
 
-## Steps in the Project
+static  
+style.css  
 
-1. Import libraries
-2. Load dataset
-3. Data preprocessing
-4. Split dataset into training and testing
-5. Train Random Forest model
-6. Evaluate model accuracy
-
-## How to Run the Project
-
-1. Download the repository
-2. Open the Jupyter Notebook
-3. Run all cells step by step
+---
 
 ## Author
 
-Palak Gupta
-MCA Student | Aspiring Data Analyst
-
+Palak Gupta  
+MCA Student  
+Aspiring Data Analyst
