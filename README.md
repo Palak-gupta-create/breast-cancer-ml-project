@@ -57,6 +57,6 @@ style.css
 
 ## Author
 
-Palak Gupta  
+Palak Gupta 
 MCA Student  
 Aspiring Data Analyst
