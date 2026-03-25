@@ -28,8 +28,8 @@ https://breast-cancer-ml-project-d07e.onrender.com
 ## Technologies Used
 
 Python  
-Flask  
-Pandas  
+Flask (Framework)  
+Pandas (Library)  
 NumPy  
 Scikit-learn  
 HTML  
@@ -59,4 +59,4 @@ style.css
 
 Palak Gupta
 MCA Student  
-Aspiring Data Analyst
+Data Analyst
